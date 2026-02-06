@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7")
+    no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* REMOVE CARD FEEL */
+.card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+  text-align: center;
+}
+
+/* BIG ROMANTIC QUESTION */
+h1 {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  margin-bottom: 40px;
+  padding: 0 20px;
+  transition: all 0.4s ease;
+}
+h1 {
+  animation: glow 1.2s ease infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255,105,135,0.6);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(255,105,135,1);
+  }
+}
+
+/* BUTTON AREA */
+.buttons {
+  position: relative;
+  height: 140px;
+}
+
+/* COMMON BUTTON STYLE */
+button {
+  padding: 16px 36px;
+  border: none;
+  border-radius: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* YES = HERO */
+#yesBtn {
+  background: linear-gradient(135deg, #ff0844, #ff416c);
+  color: white;
+  box-shadow: 0 15px 30px rgba(255, 65, 108, 0.6);
+}
+
+#yesBtn:hover {
+  transform: scale(1.15);
+}
+
+/* NO = RUNAWAY */
+#noBtn {
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+}
+
+/* RESULT POPUP */
+.result {
+  display: none;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.result img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.result h2 {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 24px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+/* Smooth background transition */
+body {
+  transition: background 0.8s ease;
+}
+
+/* After YES */
+body.yes-mode {
+  background:
+    linear-gradient(135deg, #ff0844, #ff5f8a);
+}
+
+/* Confetti hearts */
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 22px;
+  color: #ff2f6e;
+  animation: fall linear forwards;
+  z-index: 999;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
